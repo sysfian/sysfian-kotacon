@@ -1,0 +1,11 @@
+[Unit]
+Description=Kotacon Controller Service
+After=multi-user.target
+
+[Service]
+Type=idle
+User=pi
+ExecStart=/usr/bin/python3 /opt/kotacon/kotacon/controller.py
+
+[Install]
+WantedBy=multi-user.target
